@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mkyong</groupId>
-	<artifactId>spring-security-loginform-database</artifactId>
+	<groupId>com.upm.miw.spotify</groupId>
+	<artifactId>Spotify</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>SpringSecurity LoginForm Database</name>
-	<url>http://www.mkyong.com/tutorials/spring-security-tutorials/</url>
+	<name>Gestion de Favoritos de Spotify</name>
+	
 
 	<licenses>
 		<license>
@@ -39,6 +39,12 @@
 		  <version>3.1.0</version>
 		  <scope>provided</scope>
 		</dependency>
+		<dependency>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>jsp-api</artifactId>
+	        <version>2.0</version>
+	        <scope>provided</scope>
+    	</dependency>
 		<!-- Spring 3 dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -101,7 +107,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>SpringSecurity</finalName>
+		<finalName>Spotify</finalName>
 		<plugins>
 
 			<plugin>

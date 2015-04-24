@@ -1,5 +1,8 @@
 package com.upm.miw.spotify.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,16 +13,28 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
+
+
+import com.upm.i18n.IndexViewPropertiesManager;
+
 @Controller
-public class MainController {
-
-	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+public class LoginController {
+	private static final Logger log = LogManager.getLogger(LoginController.class);
+	//atributos autocompletados de esta clase
+	//concretamente se autocompleta con los valore de los ficheros .properties de internacionalizacion
+	@Autowired
+	private IndexViewPropertiesManager indexViewPropertiesManager;
+	
+	@RequestMapping(value = { "/", "hello","/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
-
+		log.info("home page");
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security Login Form - Database Authentication");
 		model.addObject("message", "This is default page!");
+		model.addObject("attributoInyectadoDesdeElProperties", indexViewPropertiesManager.getButtonMoreName());
 		model.setViewName("hello");
+		log.info("redirect to "+model.getViewName()+" page ");
 		return model;
 
 	}
@@ -48,8 +63,8 @@ public class MainController {
 		if (logout != null) {
 			model.addObject("msg", "You've been logged out successfully.");
 		}
-		model.setViewName("login");
-
+		//model.setViewName("login");
+		model.setViewName("hello");
 		return model;
 
 	}

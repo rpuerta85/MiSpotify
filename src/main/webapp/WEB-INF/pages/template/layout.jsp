@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -5,6 +7,8 @@
 <head>
 	<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common.css"/> -->
 	<!--  <script src="${pageContext.request.contextPath}/resources/js/jquery/jquery.min.js"></script>-->
 	<!-- Latest compiled and minified JavaScript -->

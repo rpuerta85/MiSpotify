@@ -12,12 +12,21 @@
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
 		<form-login 
-		    login-page="/login" 
-		    default-target-url="/welcome" 
+		    login-page="/hello" 
+		    default-target-url="/hello" 
 			authentication-failure-url="/login?error" 
 			username-parameter="username"
 			password-parameter="password" />
-		<logout logout-success-url="/login?logout"  />
+			
+	
+		<session-management invalid-session-url="/">
+        	<concurrency-control expired-url="/" max-sessions="1" />
+		</session-management>
+    
+			
+			
+			
+		<logout logout-success-url="/" logout-url="/login?logout" invalidate-session="true" delete-cookies="JSESSIONID"  />
 		<!-- enable csrf protection -->
 		<csrf/>
 	</http>

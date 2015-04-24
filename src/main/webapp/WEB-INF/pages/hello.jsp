@@ -1,8 +1,10 @@
-<%@taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html>
-<body>
+
+<%@ include file="template/layout.jsp" %>
+<div  class="container" id="cntBody" >
+		<%@ include file="includes/helloContent.jsp" %> 
+<%@ include file="template/footer.jsp" %> 
+</div>
+
 	<h1>Title : ${title}</h1>
 	<h1>Message : ${message}</h1>
 
@@ -28,5 +30,10 @@
 
 
 	</sec:authorize>
+	
+ 
+	
+	
+	
 </body>
 </html>

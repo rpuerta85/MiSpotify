@@ -1,7 +1,7 @@
 
    <div class="jumbotron">
       <h1>¡Bienvenido!</h1>
-      <p>Esta aplicación pretende ser un ejemplo de uso de varias técnicas:
+      <p>${homeView.jumbotron.headerTitle.name}  Esta aplicación pretende ser un ejemplo de uso de varias técnicas:
         </p><ul>
           <li>Por un lado, accede a datos externos empleando la
               <a title="Web API Endpoint Reference" target="_blank" href="https://developer.spotify.com/web-api/endpoint-reference/">API REST de Spotify</a></li>                
@@ -10,7 +10,7 @@
           <li>Además, también se emplea el framework HTML, CSS y JS <a title="Bootstrap framework" target="_blank" href="http://getbootstrap.com/">Bootstrap</a></li>
         </ul>
       <p></p>
-      <p><a role="button" href="" class="btn btn-primary btn-lg">Seguir leyendo »</a></p>
+      <p><a role="button" href="" class="btn btn-primary btn-lg">${homeView.jumbotron.button.more.name}         Seguir leyendo »</a></p>
     </div>
     
     <div class="container">

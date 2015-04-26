@@ -1,8 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    <div class="jumbotron">
+<<<<<<< HEAD
       <h1>Â¡Bienvenido!</h1>
       <p>${attributoInyectadoDesdeElProperties}  Esta aplicaciÃ³n pretende ser un ejemplo de uso de varias tÃ©cnicas:
+=======
+      <h1>¡Bienvenido!</h1>
+      <p>${homeView.jumbotron.headerTitle.name}  Esta aplicación pretende ser un ejemplo de uso de varias técnicas:
+>>>>>>> branch 'master' of https://github.com/rpuerta85/MiSpotify.git
         </p><ul>
           <li>Por un lado, accede a datos externos empleando la
               <a title="Web API Endpoint Reference" target="_blank" href="https://developer.spotify.com/web-api/endpoint-reference/">API REST de Spotify</a></li>                
@@ -11,7 +16,11 @@
           <li>AdemÃ¡s, tambiÃ©n se emplea el framework HTML, CSS y JS <a title="Bootstrap framework" target="_blank" href="http://getbootstrap.com/">Bootstrap</a></li>
         </ul>
       <p></p>
+<<<<<<< HEAD
       <p><a role="button" href="" class="btn btn-primary btn-lg">${homeView.jumbotron.button.more.name}         Seguir leyendo Â»</a></p>
+=======
+      <p><a role="button" href="" class="btn btn-primary btn-lg">${homeView.jumbotron.button.more.name}         Seguir leyendo »</a></p>
+>>>>>>> branch 'master' of https://github.com/rpuerta85/MiSpotify.git
     </div>
     
     <div class="container">

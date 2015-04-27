@@ -42,5 +42,6 @@
 
 	<!-- Import property files -->
 	<context:property-placeholder  location="classpath:/es/home.properties" order="1" ignore-unresolvable="true"/>
+	<context:property-placeholder  location="classpath:/es/findArtist.properties" order="2" ignore-unresolvable="true"/>
 
 </beans>

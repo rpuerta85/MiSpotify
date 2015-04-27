@@ -3,7 +3,7 @@
  <%@page session="true"%>
 <%@ include file="template/layout.jsp" %>
 <div  class="container" id="cntBody" >
-		<%@ include file="includes/helloContent.jsp" %> 
+		<%@ include file="includes/homeContent.jsp" %> 
 <%@ include file="template/footer.jsp" %> 
 </div>
 

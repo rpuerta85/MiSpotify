@@ -1,4 +1,4 @@
-package com.upm.i18n;
+package com.upm.miw.spotify.models.properties.beans;
 
 
 import java.util.List;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class IndexViewPropertiesManager {
+public class HomeViewPropertiesManager {
 	@Value("${homeView.jumbotron.button.more.name}")
 	private String buttonMoreName;
 	@Value("#{'${homeView.jumbotron.headerTitle.name}'.split(',')}")

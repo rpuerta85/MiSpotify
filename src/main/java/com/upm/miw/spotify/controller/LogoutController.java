@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.upm.i18n.IndexViewPropertiesManager;
+import com.upm.miw.spotify.models.properties.beans.HomeViewPropertiesManager;
 import com.upm.miw.spotify.utils.ViewUrlConstants;
 
 
@@ -23,10 +23,10 @@ public class LogoutController {
 	//atributos autocompletados de esta clase
 	//concretamente se autocompleta con los valore de los ficheros .properties de internacionalizacion
 	@Autowired
-	private IndexViewPropertiesManager indexViewPropertiesManager;
+	private HomeViewPropertiesManager indexViewPropertiesManager;
 	
 	
-	@RequestMapping(value = { "/" + ViewUrlConstants.LOGOUT_VIEW_NAME }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/" + ViewUrlConstants.LOGOUT_VIEW_PATH }, method = RequestMethod.GET)
 	public String logout(HttpSession session, SessionStatus status) {
 		log.info("session deleted");
 		log.debug("create: ");
@@ -35,7 +35,7 @@ public class LogoutController {
 		SecurityContextHolder.clearContext();
 		status.setComplete();
 		log.info("redirecting to login view");
-		return "redirect:/";
+		return "redirect:"+ViewUrlConstants.HOME_VIEW_PATH;
 	}
 	
 	

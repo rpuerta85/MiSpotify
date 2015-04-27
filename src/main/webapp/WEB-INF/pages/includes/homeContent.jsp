@@ -26,7 +26,7 @@
           <p>A través de esta opción puede obtener información de sus artistas preferidos,
               escuchar sus trabajos y marcarlos como favoritos para poder recuperarlos cuando desee.
           </p>
-          <p><a role="button" href="${pageContext.request.contextPath}/artista/buscar" class="btn btn-primary">Buscar Artistas »</a></p>
+          <p><a role="button" href="${pageContext.request.contextPath}/${homeViewBean.mapMsgs['buttonFindArtistUrl']}" class="btn btn-primary">Buscar Artistas »</a></p>
         </div>
         <div class="col-md-4">
           <h2><span aria-hidden="true" class="glyphicon glyphicon-folder-open"></span> Álbumes

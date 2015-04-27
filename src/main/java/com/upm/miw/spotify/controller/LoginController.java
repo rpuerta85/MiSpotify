@@ -16,7 +16,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
-import com.upm.i18n.IndexViewPropertiesManager;
+
+
+
+
+
+import com.upm.miw.spotify.models.properties.beans.HomeViewPropertiesManager;
+import com.upm.miw.spotify.utils.ViewNameConstants;
+import com.upm.miw.spotify.utils.ViewUrlConstants;
+import com.upm.miw.spotify.view.beans.HomeViewBean;
 
 @Controller
 public class LoginController {
@@ -24,16 +32,18 @@ public class LoginController {
 	//atributos autocompletados de esta clase
 	//concretamente se autocompleta con los valore de los ficheros .properties de internacionalizacion
 	@Autowired
-	private IndexViewPropertiesManager indexViewPropertiesManager;
+	private HomeViewPropertiesManager indexViewPropertiesManager;
 	
-	@RequestMapping(value = { "/", "hello","/welcome**" }, method = RequestMethod.GET)
+	@RequestMapping(value = { ViewUrlConstants.HOME_VIEW_PATH  , "home","/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
 		log.info("home page");
-		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security Login Form - Database Authentication");
-		model.addObject("message", "This is default page!");
-		model.addObject("attributoInyectadoDesdeElProperties", indexViewPropertiesManager.getButtonMoreName());
-		model.setViewName("hello");
+		HomeViewBean homeViewBean = new HomeViewBean();
+		ModelAndView model = homeViewBean.update();
+		//model.addObject("title", "Spring Security Login Form - Database Authentication");
+		//model.addObject("message", "This is default page!");
+		//model.addObject("attributoInyectadoDesdeElProperties", indexViewPropertiesManager.getButtonMoreName());
+		
+		model.setViewName(ViewNameConstants.HOME_VIEWNAME);
 		log.info("redirect to "+model.getViewName()+" page ");
 		return model;
 

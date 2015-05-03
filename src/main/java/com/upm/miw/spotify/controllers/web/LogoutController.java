@@ -1,4 +1,4 @@
-package com.upm.miw.spotify.controller;
+package com.upm.miw.spotify.controllers.web;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.upm.miw.spotify.models.properties.beans.HomeViewPropertiesManager;
-import com.upm.miw.spotify.utils.ViewUrlConstants;
+import com.upm.miw.spotify.utils.constants.ViewUrlConstants;
 
 
 

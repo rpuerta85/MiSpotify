@@ -1,4 +1,4 @@
-package com.upm.miw.spotify.utils;
+package com.upm.miw.spotify.utils.constants;
 
 public interface ViewUrlConstants {
 	String ROOT_PATH = "/";

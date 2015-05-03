@@ -2,7 +2,7 @@ package com.upm.miw.spotify.view.beans;
 
 import org.springframework.web.servlet.ModelAndView;
 
-import com.upm.miw.spotify.utils.ViewUrlConstants;
+import com.upm.miw.spotify.utils.constants.ViewUrlConstants;
 import com.upm.miw.spotify.views.web.ee.HomeViewParamsEE;
 
 
@@ -29,6 +29,11 @@ public class HomeViewBean extends GenericView{
 		
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	public static String getName() {
+		return NAME;
 	}
 
 

@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand"><span aria-hidden="true" class="glyphicon glyphicon-home"> </span></a>
+          <a href="${pageContext.request.contextPath}/" class="navbar-brand"><span aria-hidden="true" class="glyphicon glyphicon-home"> </span></a>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse" id="navbar">
           <ul class="nav navbar-nav">

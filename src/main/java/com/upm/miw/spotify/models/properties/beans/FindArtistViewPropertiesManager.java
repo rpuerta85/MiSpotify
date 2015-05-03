@@ -19,6 +19,9 @@ public class FindArtistViewPropertiesManager {
 	private String findArtistViewFormFindArtistInputTextPlaceholder;
 	@Value("${findArtistView.form.find.artist.button.submit.name}")
 	private String findArtistViewFormFindArtistButtonSubmitName;
+	@Value("${findArtistView.form.find.artist.msg.error.value}")
+	private String findArtistViewFormFindArtistMsgErrorValue;
+	
 	
 	public String getFindArtistViewPanelHeaderTitle() {
 		return findArtistViewPanelHeaderTitle;
@@ -61,6 +64,13 @@ public class FindArtistViewPropertiesManager {
 	public void setFindArtistViewFormFindArtistButtonSubmitName(
 			String findArtistViewFormFindArtistButtonSubmitName) {
 		this.findArtistViewFormFindArtistButtonSubmitName = findArtistViewFormFindArtistButtonSubmitName;
+	}
+	public String getFindArtistViewFormFindArtistMsgErrorValue() {
+		return findArtistViewFormFindArtistMsgErrorValue;
+	}
+	public void setFindArtistViewFormFindArtistMsgErrorValue(
+			String findArtistViewFormFindArtistMsgErrorValue) {
+		this.findArtistViewFormFindArtistMsgErrorValue = findArtistViewFormFindArtistMsgErrorValue;
 	}
 
 	

@@ -1,4 +1,4 @@
-package com.upm.miw.spotify.controller;
+package com.upm.miw.spotify.controllers.web;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,9 +21,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
+
+
+
 import com.upm.miw.spotify.models.properties.beans.HomeViewPropertiesManager;
-import com.upm.miw.spotify.utils.ViewNameConstants;
-import com.upm.miw.spotify.utils.ViewUrlConstants;
+import com.upm.miw.spotify.utils.constants.ViewNameConstants;
+import com.upm.miw.spotify.utils.constants.ViewUrlConstants;
 import com.upm.miw.spotify.view.beans.HomeViewBean;
 
 @Controller
@@ -35,14 +39,10 @@ public class LoginController {
 	private HomeViewPropertiesManager indexViewPropertiesManager;
 	
 	@RequestMapping(value = { ViewUrlConstants.HOME_VIEW_PATH  , "home","/welcome**" }, method = RequestMethod.GET)
-	public ModelAndView defaultPage() {
+	public ModelAndView homeView() {
 		log.info("home page");
 		HomeViewBean homeViewBean = new HomeViewBean();
 		ModelAndView model = homeViewBean.update();
-		//model.addObject("title", "Spring Security Login Form - Database Authentication");
-		//model.addObject("message", "This is default page!");
-		//model.addObject("attributoInyectadoDesdeElProperties", indexViewPropertiesManager.getButtonMoreName());
-		
 		model.setViewName(ViewNameConstants.HOME_VIEWNAME);
 		log.info("redirect to "+model.getViewName()+" page ");
 		return model;
@@ -74,7 +74,7 @@ public class LoginController {
 			model.addObject("msg", "You've been logged out successfully.");
 		}
 		//model.setViewName("login");
-		model.setViewName("hello");
+		model.setViewName(ViewNameConstants.HOME_VIEWNAME);
 		return model;
 
 	}
